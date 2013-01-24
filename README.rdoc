@@ -6,6 +6,8 @@
 
 = Auto Change Start Status Plugin
 
+If I create issue with default status for self then the plugin change the status
+
 == Installation
 
   cd vendor/plugins
