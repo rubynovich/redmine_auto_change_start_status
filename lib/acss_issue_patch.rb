@@ -4,19 +4,19 @@ module AutoChangeStartStatusPlugin
   module IssuePatch
     def self.included(base)
       base.extend(ClassMethods)
-      
+
       base.send(:include, InstanceMethods)
-      
+
       base.class_eval do
-        after_create :change_status, :if => "self.author == self.assigned_to"
+        after_create :change_status, :if => "User.current == self.assigned_to"
       end
 
     end
-      
+
     module ClassMethods
 
     end
-    
+
     module InstanceMethods
       def change_status
         if self.status == IssueStatus.default
