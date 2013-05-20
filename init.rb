@@ -3,9 +3,9 @@ require 'redmine'
 Redmine::Plugin.register :redmine_auto_change_start_status do
   name 'Auto Change Start Status'
   author 'Roman Shipiev'
-  description 'Change start status issue from default to status from plugin settings'
+  description 'Changing start status issue from default to status from plugin settings'
   version '0.0.1'
-  url 'https://github.com/rubynovich/redmine_auto_change_start_status'
+  url 'https://bitbucket.org/rubynovich/redmine_auto_change_start_status'
   author_url 'http://roman.shipiev.me'
 
   settings :default => {
